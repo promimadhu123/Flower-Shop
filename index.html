@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop - Responsive Design</title>
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      
+        :root {
+            --color-primary-orange: #F97316; 
+            --color-dark-text: #2D3748;      
+            --color-light-gray-bg: #F8F9FA;  
+            --color-hero-bg: #FEF9F5;        
+            --color-newsletter-bg: #FFF3E0;  
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-dark-text);
+            background-color: var(--color-light-gray-bg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-hero-section {
+            background-image: url('https://via.placeholder.com/1920x650/FEF9F5/4B5563?text=Hero+Background+Image'); /* Replace with your actual hero background */
+            background-size: cover;
+            background-position: center;
+        }
+        .bg-newsletter-section {
+            background-image: url('https://via.placeholder.com/1920x350/FFF3E0/4B5563?text=Colorful+Bunch+Background'); /* Replace with your actual newsletter background */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-cover-h-200 { 
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .img-cover-h-240 { 
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+        @media (max-width: 767px) { 
+            .img-cover-h-240 {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    
+    <header class="bg-white shadow-sm py-4 md:py-5">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+         
+            <a href="#" class="flex-shrink-0">
+                <img src="assets/logo.png"alt="logo">
+            </a>
+
+            
+            <nav class="hidden md:flex space-x-7 lg:space-x-10 text-gray-700 text-[15px] font-medium">
+                <a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Home</a>
+                <a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Shop</a>
+                <a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">About</a>
+                <a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Blog</a>
+                <a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-3 md:space-x-4">
+                <button class="text-gray-600 hover:text-[var(--color-primary-orange)] p-1">
+                   
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
+                <button class="text-gray-600 hover:text-[var(--color-primary-orange)] p-1">
+                   
+                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </button>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-[var(--color-primary-orange)] p-1">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+    </header>
+
+   >
+    <section class="bg-hero-section py-16 md:py-24 lg:py-32 flex items-center min-h-[500px] md:min-h-[600px]">
+        <div class="container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8 lg:gap-16">
+            
+            <div class="text-center md:text-left">
+                <p class="text-lg md:text-xl font-semibold text-[var(--color-primary-orange)] mb-2 md:mb-3">Always Fresh</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-[var(--color-dark-text)] mb-4 md:mb-6">
+                    ALWAYS FRESH<br><span class="text-[var(--color-primary-orange)]">FLOWERS</span>
+                </h1>
+                <p class="text-gray-700 text-base md:text-lg mb-8 md:mb-10 max-w-md mx-auto md:mx-0 leading-relaxed">
+                    A single rose can be my garden... a single friend, my world. Our passion for creating stunning floral arrangements shines through in every petal.
+                </p>
+                <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white font-semibold py-3.5 px-9 rounded-full transition-colors duration-200 shadow-lg">
+                    Shop Now
+                </button>
+            </div>
+            
+            <div class="hidden md:flex justify-center md:justify-end">
+                <img src="assets/hero-flower.png">
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Our Plants</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10">
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                   <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                  <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                   <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                   <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="assets/sample-flower-image.png">         
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                     <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                     <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                    <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+                     <img src="assets/sample-flower-image.png">
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-lg mb-1">Lily Blossom</h3>
+                        <p class="text-[var(--color-primary-orange)] font-bold mb-3">20 USD</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-4 py-2 rounded-full text-sm transition-colors duration-200">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-6 grid md:grid-cols-2 items-center gap-8 lg:gap-16">
+            
+            <div class="md:order-1 flex justify-center md:justify-start">
+                <img src="assets/flower-store.png">
+            </div>
+           
+            <div class="md:order-2 text-center md:text-left">
+                <span class="inline-block bg-orange-200 text-[var(--color-primary-orange)] font-semibold text-sm px-4 py-1.5 rounded-full mb-4">
+                    Exclusive Offer
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">Flower & Plants <br class="hidden md:block"> Lover</h2>
+                <p class="text-gray-700 text-base md:text-lg mb-6 leading-relaxed">
+                    We believe in the power of nature to transform spaces and uplift spirits. Our carefully curated selection of flowers and plants is designed to bring beauty and tranquility into your home or office.
+                </p>
+                <p class="text-gray-600 text-sm md:text-base mb-8 leading-relaxed">
+                    Each bloom is chosen for its vibrancy and longevity, ensuring that you receive only the freshest and most beautiful arrangements.
+                </p>
+                <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white font-semibold py-3.5 px-9 rounded-full transition-colors duration-200 shadow-lg">
+                    Discover More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Latest Deals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+               
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center transform transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="w-full md:w-1/2 flex-shrink-0">
+                        <img src="assets/deal-bloom.png">
+                    </div>
+                    <div class="p-6 md:p-8 w-full md:w-1/2 text-center md:text-left">
+                        <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">25% OFF</span>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2">Zolia Plaza</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Embrace the beauty of nature with our stunning floral arrangements, perfect for any occasion.</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-5 py-2.5 rounded-full text-sm transition-colors duration-200">Shop Now</button>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col md:flex-row items-center transform transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg">
+                    <div class="w-full md:w-1/2 flex-shrink-0">
+                        <img src="assets/deal-ana.png">
+                    </div>
+                    <div class="p-6 md:p-8 w-full md:w-1/2 text-center md:text-left">
+                        <span class="inline-block bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">30% OFF</span>
+                        <h3 class="font-bold text-xl md:text-2xl mb-2">Aqua Bloom</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Discover exquisite flowers and plants that bring joy and elegance to your surroundings.</p>
+                        <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-5 py-2.5 rounded-full text-sm transition-colors duration-200">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="bg-newsletter-section text-[var(--color-dark-text)] py-16 md:py-24 flex items-center justify-center text-center">
+        <div class="container mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Join the colorful Bunch</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto leading-relaxed">
+                Sign up for our newsletter to receive exclusive offers, new product updates, and floral inspiration directly to your inbox.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email" class="flex-grow p-4 md:p-5 rounded-full border border-gray-300 outline-none text-gray-800 placeholder-gray-500 shadow-md focus:ring-2 focus:ring-[var(--color-primary-orange)] focus:border-transparent">
+                <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white font-semibold py-4 px-8 rounded-full transition-colors duration-200 shadow-lg w-full sm:w-auto">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <div>
+                <a href="#" class="mb-4 block">
+                    <img src="assets/logo.png">
+                </a>
+                <p class="text-sm leading-relaxed mb-4">
+                    We bring the beauty of nature to your doorstep with our exquisite collection of fresh flowers and lush plants.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-[var(--color-primary-orange)] transition-colors duration-200">
+                      
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 13.5h2l1-4H14V6.5c0-1.24.73-2 2-2h2V0h-3.22c-3.27 0-5.78 2-5.78 5.48V9.5H6v4h2.5V24h5.5v-10.5z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[var(--color-primary-orange)] transition-colors duration-200">
+                        
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.37-.83.49-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.48 0-4.5 2.02-4.5 4.5 0 .35.04.69.11 1.02C8.7 9.42 5.6 7.82 3.53 5.2c-.37.64-.58 1.39-.58 2.22 0 1.56.79 2.93 1.99 3.73-.73-.02-1.4-.22-2-.52v.06c0 2.18 1.55 4 3.59 4.42-.3.08-.6.12-.9.12-.22 0-.43-.02-.64-.07.57 1.78 2.2 3.09 4.12 3.12-1.55 1.22-3.5 1.95-5.64 1.95-.36 0-.7-.02-1.04-.06C2.9 20.3 5.06 21 7.35 21 16 21 20.5 13.5 20.5 8.2c0-.16-.02-.32-.04-.48.9-.65 1.68-1.47 2.3-2.42z"></path></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-[var(--color-primary-orange)] transition-colors duration-200">
+                       
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.773 1.673 4.92 4.92.058 1.265.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.148 3.252-1.673 4.773-4.92 4.92-.058.007-1.265.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.773-1.673-4.92-4.92-.058-1.265-.07-1.645-.07-4.85s.012-3.584.07-4.85c.148-3.252 1.673-4.773 4.92-4.92zM12 4.582c-2.406 0-2.693.01-3.627.052-2.128.098-2.909.805-2.909 2.909 0 .934.04 1.22.052 3.626.01 2.406 0 2.693-.052 3.627-.098 2.128-.805 2.909-2.909 2.909-.934 0-1.22-.04-3.626-.052-2.406-.01-2.693-.01-3.627-.052-2.128-.098-2.909-.805-2.909-2.909 0-.934-.04-1.22-.052-3.626-.01-2.406 0-2.693.052-3.627.098-2.128.805-2.909 2.909-2.909.934 0 1.22.04 3.626.052 2.406.01 2.693.01 3.627.052z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            
+            <div>
+                <h3 class="font-semibold text-lg text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Refund Policy</a></li>
+                    <li><a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">Shipping Info</a></li>
+                    <li><a href="#" class="hover:text-[var(--color-primary-orange)] transition-colors duration-200">FAQ</a></li>
+                </ul>
+            </div>
+
+          
+            <div>
+                <h3 class="font-semibold text-lg text-white mb-4">Contact Info</h3>
+                <p class="text-sm mb-2">123 Flower Street, Botanical City, Country</p>
+                <p class="text-sm mb-2">Email: info@flowershop.com</p>
+                <p class="text-sm mb-2">Phone: +1 (123) 456-7890</p>
+            </div>
+
+            
+            <div class="hidden md:block">
+                <h3 class="font-semibold text-lg text-white mb-4">Newsletter</h3>
+                <p class="text-sm mb-4 leading-relaxed">Subscribe to our newsletter for the latest updates.</p>
+                <div class="flex flex-col gap-3">
+                    <input type="email" placeholder="Your email address" class="p-3 rounded-md bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-[var(--color-primary-orange)]">
+                    <button class="bg-[var(--color-primary-orange)] hover:bg-orange-700 text-white px-5 py-2.5 rounded-md text-sm transition-colors duration-200">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
+            &copy; 2025 Flower Shop. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
